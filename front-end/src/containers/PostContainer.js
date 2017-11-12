@@ -89,7 +89,7 @@ class PostContainer extends React.Component {
           <CardTitle><h2>{post.title}</h2></CardTitle>
           <CardText>{post.body}</CardText>
           <CardActions>
-            <Link to={'/posts/'+ post.id}><RaisedButton default={true} label="View" /></Link>
+            <Link to={'/' + post.category + '/' + post.id}><RaisedButton default={true} label="View" /></Link>
             <RaisedButton primary={true} onClick={this.handleOpen} label="Edit" />
               <RaisedButton secondary={true} onClick={this.handleDelete} label="Delete" />
               <span>{post.voteScore}</span>
